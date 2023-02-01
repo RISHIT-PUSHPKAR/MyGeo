@@ -4,69 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://js.arcgis.com/4.25/esri/themes/light/main.css">
+    
+
     <link rel="stylesheet" href="./style.css">
-
-    <!-- Load Leaflet from CDN -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js" integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg==" crossorigin=""></script>
-
-
-    <!-- Load Esri Leaflet from CDN -->
-    <script src="https://unpkg.com/esri-leaflet@2.2.3/dist/esri-leaflet.js" integrity="sha512-YZ6b5bXRVwipfqul5krehD9qlbJzc6KOGXYsDjU9HHXW2gK57xmWl2gU6nAegiErAqFXhygKIsWPKbjLPXVb2g==" crossorigin=""></script>
-
-
-    <!-- Load Esri Leaflet Geocoder from CDN -->
-    <link rel="stylesheet" href="https://unpkg.com/esri-leaflet-geocoder@2.2.13/dist/esri-leaflet-geocoder.css" integrity="sha512-v5YmWLm8KqAAmg5808pETiccEohtt8rPVMGQ1jA6jqkWVydV5Cuz3nJ9fQ7ittSxvuqsvI9RSGfVoKPaAJZ/AQ==" crossorigin="">
-    <script src="https://unpkg.com/esri-leaflet-geocoder@2.2.13/dist/esri-leaflet-geocoder.js" integrity="sha512-zdT4Pc2tIrc6uoYly2Wp8jh6EPEWaveqqD3sT0lf5yei19BC1WulGuh5CesB0ldBKZieKGD7Qyf/G0jdSe016A==" crossorigin=""></script>
-
-
-
-    <title>Graviti</title>
+    <link rel="shortcut icon" href="#">
+    <title>MyGeo</title>
 </head>
 <body>
     <header>
         <nav class="nav">
-            <img src="./Assets/graviti-logo-1.svg" alt="Graviti Logo" class="logo-1">
+            <h1>MyGeo</h1>
+            <p>Total Distance : <strong class="total-distance"></strong></p>
         </nav>
     </header>
     <main>
-        <div class="heading-line">Let's calculate <strong class="highlight">distance</strong> from Google maps</div>
-        <section class="calculation-section">
-            <div class="input-sec">
-                <form action="">
-                    <label for="origin" class="label-text">Origin</label>
-                    <div class="combine o">
-                        <img src="./Assets/origin-logo.svg" class="origin-icon ci" alt="origin icon">
-                        <input type="text" name="origin" id="inp" placeholder="">
-                    </div>
-                    <div class="combine add-btn-box">
-                        <img src="./Assets/Add--alt.svg" alt="add stop icon" class="add-stop-icon">
-                        <button class="add-stop-btn">Add another stop</button>
-                    </div>
-                    <label for="destination" class="label-text">Destination</label>
-                    <div class="combine">
-                        <img src="./Assets/destination-logo.svg" class="destination-icon ci" alt="destination icon">
-                        <input type="text" name="destination" id="inp">
-                    </div>   
-                    
-                </form>
-                <div class="calc-btn-sec">
-                    <button class="calc-btn" type="button">Calculate</button>
-                </div>
-            </div>
+        <div id="viewDiv">
             
-            <div class="distance-calc-sec">
-                <p class="distance-text">Distance</p>
-                <p class="calculated-distance">1,427 kms</p>
-            </div>
-            <div class="result-statement">
-                <p>The distance between <strong class="highlight highlight-origin">Mumbai</strong> and <strong class="highlight highlight-destination">Delhi 
-                </strong>via the seleted route is <strong class="highlight highlight-distance"><span id="km">1,427</span>Kms</strong>.</p>
-            </div>
-        </section>
-        <section class="map-section" id="map">
-        </section>
+        </div>
     </main>
+    <script src="https://js.arcgis.com/4.25/"></script>
     <script src="./script.js"></script>
+    
 </body>
 </html>
+
